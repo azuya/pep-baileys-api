@@ -441,7 +441,7 @@ const numberExist = async (session, jid) => {
 /**
  * @param {import('@whiskeysockets/baileys').AnyWASocket} session
  */
-const sendMessage = async (session, receiver, message, delayMs = 1000) => {
+const sendMessage = async (session, receiver, message, delayMs = 200) => {
     try {
         await delay(parseInt(delayMs))
         return await session.sendMessage(receiver, message)

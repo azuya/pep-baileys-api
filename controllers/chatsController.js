@@ -29,19 +29,19 @@ const send = async (req, res) => {
         const exists = await isExists(session, receiver, isGroup)
 
         if (!exists) {
-            return response(res, 400, false, 'The receiver number is not exists.')
+            return response(res, 200, false, 'The receiver number is not exists.')
         }
 
         if (filterTypeMessaje.length > 0) {
             const url = message[filterTypeMessaje]?.url
 
             if (url.length === undefined || url.length === 0) {
-                return response(res, 400, false, 'The URL is invalid or empty.')
+                return response(res, 200, false, 'The URL is invalid or empty.')
             }
 
             if (!isUrlValid(url)) {
                 if (!fileExists(url)) {
-                    return response(res, 400, false, 'The file or url does not exist.')
+                    return response(res, 200, false, 'The file or url does not exist.')
                 }
             }
         }
