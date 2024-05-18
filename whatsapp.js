@@ -429,6 +429,15 @@ const isExists = async (session, jid, isGroup = false) => {
     }
 }
 
+const numberExist = async (session, jid) => {
+    try {
+        const [result] = await session.onWhatsApp(jid)
+        return !!result?.exists
+    } catch (e) {
+        return Promise.reject(e)
+    }
+}
+
 /**
  * @param {import('@whiskeysockets/baileys').AnyWASocket} session
  */
