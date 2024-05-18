@@ -656,4 +656,5 @@ export {
     getMessageMedia,
     getStoreMessage,
     blockAndUnblockUser,
+    numberExist,
 }
