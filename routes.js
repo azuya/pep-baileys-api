@@ -3,7 +3,7 @@ import sessionsRoute from './routes/sessionsRoute.js'
 import chatsRoute from './routes/chatsRoute.js'
 import groupsRoute from './routes/groupsRoute.js'
 import miscRoute from './routes/miscRoute.js'
-import contactsRoute from './routes/contacstRoute.js'
+import contactsRoute from './routes/contactsRoute.js'
 import response from './response.js'
 import authenticationValidator from './middlewares/authenticationValidator.js'
 
