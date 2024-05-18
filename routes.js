@@ -15,7 +15,7 @@ router.use('/sessions', sessionsRoute)
 router.use('/chats', chatsRoute)
 router.use('/groups', groupsRoute)
 router.use('/misc', miscRoute)
-
+router.use('/contact', contactRoute)
 router.all('*', (req, res) => {
     response(res, 404, false, 'The requested url cannot be found.')
 })
